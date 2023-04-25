@@ -12,7 +12,7 @@ router.post("/task", async (req, res) => {
 			task: req.body.task,
 		});
 		const save = await newTask.save();
-		res.status(200).json("item successfully added");
+		res.status(200).json(save);
 	} catch (err) {
 		res.json(err);
 	}
